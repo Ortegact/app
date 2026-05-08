@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Firebase - Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📦 CRUD de Productos</h1>
+
+        <!-- Formulario -->
+        <form id="productForm">
+            <input type="hidden" id="productId">
+            <input type="text" id="productName" placeholder="Nombre del producto" required>
+            <input type="number" id="productPrice" placeholder="Precio" step="0.01" required>
+            <button type="submit">Guardar producto</button>
+        </form>
+
+        <!-- Búsqueda -->
+        <input type="text" id="searchInput" placeholder="🔍 Buscar producto..." class="search-box">
+
+        <!-- Tabla de productos -->
+        <table id="productsTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="productsBody">
+                <tr><td colspan="3">Cargando productos...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
